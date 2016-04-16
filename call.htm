@@ -836,10 +836,10 @@
     }
 
     function uiCallTerminated(s_description){
-        uiBtnCallSetText("Call");
-        btnHangUp.value = 'HangUp';
-        btnHoldResume.value = 'hold';
-        btnMute.value = "Mute";
+        uiBtnCallSetText("Ответ");
+        btnHangUp.value = 'Сброс';
+        btnHoldResume.value = 'Удержание';
+        btnMute.value = "Выкл микр";
         btnCall.disabled = false;
         btnHangUp.disabled = true;
         if (window.btnBFCP) window.btnBFCP.disabled = true;
@@ -922,7 +922,7 @@
                         // start listening for events
                         oSipSessionCall.setConfiguration(oConfigCall);
 
-                        uiBtnCallSetText('Ответить');
+                        uiBtnCallSetText('Ответ');
                         btnHangUp.value = 'Сброс';
                         btnCall.disabled = false;
                         btnHangUp.disabled = false;
@@ -968,7 +968,7 @@
                         txtRegStatus.innerHTML = "<i>" + e.description + "</i>";
                     }
                     else if (e.session == oSipSessionCall) {
-                        btnHangUp.value = 'HangUp';
+                        btnHangUp.value = 'Сброс';
                         btnCall.disabled = true;
                         btnHangUp.disabled = false;
                         btnTransfer.disabled = false;
